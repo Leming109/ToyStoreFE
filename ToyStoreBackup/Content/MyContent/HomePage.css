@@ -1,0 +1,482 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.home-header {
+    background-color: dodgerblue;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+    .logo img {
+        height: 100px;
+        border-radius: 60%;
+        
+    }
+
+    .logo h1 {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+.search-box {
+    position: relative;
+    width: 45%;
+}
+
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px 10px 40px;
+        border: 1px solid silver;
+        border-radius: 25px;
+        outline: none;
+        font-size: 14px;
+    }
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+
+
+.nav {
+    background: dodgerblue;
+    border-bottom: 1px solid #eee;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+    .nav a {
+        padding: 12px 14px;
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+        white-space: nowrap;
+        
+    }
+
+        .nav a:hover {
+            color: white;
+        }
+
+.icon-header {
+    list-style: none; /* Xóa dấu chấm */
+    display: flex; /* Cho các li nằm ngang */
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa 2 icon */
+    margin: 0;
+    padding: 0;
+}
+
+    .icon-header .icon {
+        display: inline-block;
+    }
+
+        .icon-header .icon a {
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .icon-header .icon a:hover {
+            color: white;
+        }
+
+.banner {
+    background-image: url('../My image/Banner-Tro-choi-thu-nhun.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-bar {
+    width: 100%;
+    height: 82px;
+    background-color: #08a9df;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    box-sizing: border-box;
+}
+
+.feature-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+    
+
+.feature-icon {
+    width: 46px;
+    height: 46px;
+    background-color: navajowhite;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+
+}
+
+    .feature-icon i {
+        color: black;
+        font-size: 22px;
+    }
+
+.feature-content h3 {
+    margin: 0 0 5px 0;
+    color: white;
+    font-size: 15px;
+}
+
+.feature-content p {
+    margin: 0;
+    color: white;
+    font-size: 12px;
+}
+
+.feature-product {
+    text-align: center;
+}
+
+.feature-product h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.product-item {
+    width: 200px;
+    border: 1px solid #ccc;
+}
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+    }
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0 ;
+}
+
+    .product-item .price {
+        font-weight: bold;
+    }
+
+
+.product-hidden {
+    display: none;
+}
+
+.view-all {
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+.view-all button {
+    width: 135px;
+    height: 42px;
+    background-color: white;
+    color: #0099ff;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .view-all button:hover {
+        background-color: #eaf6ff;
+    }
+
+
+.banner-product-new {
+    background-image: url('../my image/ádasdasdasdasdasdasda.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 200px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.banner-product-bestsell {
+    background-image: url('../my image/1_842929d5c6c643bb991f82207108b99b.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 200px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.banner-product-goodprice {
+    background-image: url('../my image/header-web-1370-x-308-2_04cf608bec4e4c8691df6b0e06dfc585.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 200px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.feature-product-new {
+    text-align: center;
+    padding-top: 200px;
+}
+
+    .feature-product-new h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+.feature-product-best {
+    text-align: center;
+    padding-top: 200px;
+}
+
+    .feature-product-best h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+.Collection {
+    text-align: center;
+    padding-top: 200px;
+}
+
+    .Collection h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+.collection-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+.collection-item {
+    width: 200px;
+}
+
+    .collection-item img {
+        width: 100%;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+
+
+.footer-social {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+    .footer-social h4 {
+        margin-bottom: 16px;
+        color: #555;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+.fb {
+    background: #4267B2;
+}
+
+.ig {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.yt {
+    background: #FF0000;
+}
+
+
+
+footer {
+    background-color: gray;
+    color: white;
+
+}
+
+.footer-content {
+    width: 76%;
+    margin: auto;
+    display: flex;
+    padding-top: 50px;
+}
+
+.footer-column {
+    width: 30%;
+    padding-left: 30px;
+    border-left: 1px solid white;
+}
+
+    .footer-column h3 {
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column li {
+        margin-bottom: 18px;
+    }
+
+    .footer-column a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+.footer-bottom {
+    background-color: #666;
+    text-align: center;
+    padding: 10px;
+}
+
+    .footer-bottom p {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+
+.footer-content {
+    display: flex;
+}
+
+.partners {
+    text-align: center;
+    padding: 20px;
+}
+
+    .partners h4 {
+        margin-bottom: 16px;
+        color: #555;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    opacity: 0.8;
+}
+
+    .partner-logos span {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+.product-item {
+    width: 250px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 5px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.product-image:hover .add-cart {
+    display: block;
+}
+
+.add-cart:hover {
+    background-color: #0875d1;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-item .price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+

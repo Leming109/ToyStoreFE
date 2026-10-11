@@ -1,0 +1,366 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.home-header {
+    background-color: dodgerblue;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+    .logo img {
+        height: 100px;
+        border-radius: 60%;
+    }
+
+    .logo h1 {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+.search-box {
+    position: relative;
+    width: 45%;
+}
+
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px 10px 40px;
+        border: 1px solid silver;
+        border-radius: 25px;
+        outline: none;
+        font-size: 14px;
+    }
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+
+
+.nav {
+    background: dodgerblue;
+    border-bottom: 1px solid #eee;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+    .nav a {
+        padding: 12px 14px;
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+        .nav a:hover {
+            color: white;
+        }
+
+.icon-header {
+    list-style: none; /* Xóa dấu chấm */
+    display: flex; /* Cho các li nằm ngang */
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa 2 icon */
+    margin: 0;
+    padding: 0;
+}
+
+    .icon-header .icon {
+        display: inline-block;
+    }
+
+        .icon-header .icon a {
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+            .icon-header .icon a:hover {
+                color: white;
+            }
+
+/* Login Card */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 40px 36px;
+}
+
+    .login-card h2 {
+        font-size: 20px;
+        margin-bottom: 28px;
+        color: #222;
+        border-bottom: 3px solid #1a73e8;
+        display: inline-block;
+        padding-bottom: 6px;
+    }
+
+.form-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+    .form-group input {
+        width: 100%;
+        padding: 12px 14px 12px 42px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+        transition: border 0.2s;
+    }
+
+        .form-group input:focus {
+            border-color: #1a73e8;
+        }
+
+    .form-group .icon {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: 16px;
+    }
+
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+    .btn-login:hover {
+        background: #1557b0;
+    }
+
+.links {
+    text-align: center;
+    margin: 16px 0;
+    font-size: 13px;
+}
+
+    .links a {
+        color: #1a73e8;
+        text-decoration: none;
+    }
+
+.divider {
+    text-align: center;
+    margin: 22px 0;
+    color: #888;
+    font-size: 13px;
+    position: relative;
+}
+
+    .divider::before, .divider::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 35%;
+        height: 1px;
+        background: #e0e0e0;
+    }
+
+    .divider::before {
+        left: 0;
+    }
+
+    .divider::after {
+        right: 0;
+    }
+
+.social-btns {
+    display: flex;
+    gap: 12px;
+}
+
+    .social-btns button {
+        flex: 1;
+        padding: 11px;
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+.btn-google {
+    background: #db4437;
+}
+
+.btn-facebook {
+    background: #4267B2;
+}
+
+/* Footer social */
+/* Footer social */
+.footer-social {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+    .footer-social h4 {
+        margin-bottom: 16px;
+        color: #555;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+    .social-icons a {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+.fb {
+    background: #4267B2;
+}
+
+.ig {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.yt {
+    background: #FF0000;
+}
+
+.partners {
+    text-align: center;
+    padding: 20px;
+}
+
+    .partners h4 {
+        margin-bottom: 16px;
+        color: #555;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    opacity: 0.8;
+}
+
+    .partner-logos span {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+footer {
+    background-color: gray;
+    color: white;
+    width: 100%;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 0;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+    .footer-column h3 {
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column li {
+        margin-bottom: 18px;
+    }
+
+    .footer-column a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+.footer-bottom {
+    background-color: #666;
+    text-align: center;
+    padding: 10px;
+}
+
+    .footer-bottom p {
+        margin: 10px;
+        font-size: 14px;
+    }

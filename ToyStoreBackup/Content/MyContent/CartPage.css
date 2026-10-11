@@ -1,0 +1,494 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* Header */
+.home-header {
+    background-color: dodgerblue;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+    .logo img {
+        height: 100px;
+        border-radius: 60%;
+    }
+
+    .logo h1 {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+.search-box {
+    position: relative;
+    width: 45%;
+}
+
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px 10px 40px;
+        border: 1px solid silver;
+        border-radius: 25px;
+        outline: none;
+        font-size: 14px;
+    }
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+
+
+.nav {
+    background: dodgerblue;
+    border-bottom: 1px solid #eee;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+    .nav a {
+        padding: 12px 14px;
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+        .nav a:hover {
+            color: white;
+        }
+
+.icon-header {
+    list-style: none; /* Xóa dấu chấm */
+    display: flex; /* Cho các li nằm ngang */
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa 2 icon */
+    margin: 0;
+    padding: 0;
+}
+
+    .icon-header .icon {
+        display: inline-block;
+    }
+
+        .icon-header .icon a {
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+            .icon-header .icon a:hover {
+                color: white;
+            }
+
+/* Main Menu */
+.MainMenu {
+    padding: 40px 0;
+}
+
+.cart-box {
+    background-color: white;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.cart-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.cart-subtitle {
+    font-size: 14px;
+    color: dimgray;
+    margin-bottom: 15px;
+}
+
+.btn-continue {
+    display: inline-block;
+    background-color: deepskyblue;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+    .btn-continue:hover {
+        background-color: dodgerblue;
+    }
+
+    .btn-continue i {
+        margin-right: 5px;
+    }
+.empty-cart-box {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 50px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.btn-add-sample {
+    margin-top: 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .btn-add-sample:hover {
+        background-color: darkgreen;
+    }
+
+.cart-content-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 20px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.cart-items-list {
+    border-top: 1px solid gainsboro;
+}
+
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid gainsboro;
+    gap: 15px;
+}
+
+    .cart-item-row img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border: 1px solid gainsboro;
+        border-radius: 4px;
+    }
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.item-sku {
+    font-size: 12px;
+    color: dimgray;
+    margin-bottom: 4px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+}
+
+    .qty-control button {
+        width: 30px;
+        height: 30px;
+        border: 1px solid silver;
+        background-color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+        .qty-control button:hover {
+            background-color: whitesmoke;
+        }
+
+    .qty-control input {
+        width: 40px;
+        height: 30px;
+        border-top: 1px solid silver;
+        border-bottom: 1px solid silver;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+        font-weight: bold;
+    }
+
+.item-total-price {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.btn-remove-item {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+    .btn-remove-item:hover {
+        color: red;
+    }
+
+.cart-summary-box {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid gainsboro;
+    height: fit-content;
+}
+
+.summary-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.total-row {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    border-top: 2px solid gainsboro;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.voucher-input-group {
+    display: flex;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+    .voucher-input-group input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid silver;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    .voucher-input-group button {
+        background-color: deepskyblue;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+.voucher-applied-box {
+    background-color: honeydew;
+    color: darkgreen;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .voucher-applied-box button {
+        background: none;
+        border: none;
+        color: red;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+.btn-checkout {
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+    .btn-checkout:hover {
+        background-color: darkorange;
+    }
+
+.btn-clear-all {
+    width: 100%;
+    background: none;
+    border: 1px solid gray;
+    color: gray;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-clear-all:hover {
+        background-color: mistyrose;
+        color: red;
+        border-color: red;
+    }
+
+.cart-footer-action {
+    margin-top: 25px;
+}
+
+.text-green {
+    color: darkgreen;
+}
+
+.toast-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast-msg {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px gray;
+    border-left: 4px solid deepskyblue;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+    .toast-msg.err {
+        border-left-color: red;
+    }
+
+    .toast-msg.ok {
+        border-left-color: darkgreen;
+    }
+
+@media (max-width: 768px) {
+    .cart-content-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Footer*/
+footer {
+    background-color: gray;
+    color: white;
+}
+
+.footer-content {
+    width: 76%;
+    margin: auto;
+    display: flex;
+    padding-top: 50px;
+}
+
+.footer-column {
+    width: 30%;
+    padding-left: 30px;
+    border-left: 1px solid white;
+}
+
+    .footer-column h3 {
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column li {
+        margin-bottom: 18px;
+    }
+
+    .footer-column a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+.footer-bottom {
+    background-color: #666;
+    text-align: center;
+    padding: 10px;
+}
+
+    .footer-bottom p {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+
+.footer-content {
+    display: flex;
+}
+
+

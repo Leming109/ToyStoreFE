@@ -1,0 +1,158 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css" />
+    <link href="~/Content/MyContent/CartPage.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="home-header">
+        <h1 class="logo">
+            <a href="~/ToyZone/HomeView"><img class="anh-logo" src="~/Content/My image/98582e94c3e94c5c83ae526757ad003b.jpg" /></a>
+
+        </h1>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+        <ul class="icon-header">
+            <li class="icon">
+                <a href="~/ToyZone/user"><i class="fa-solid fa-user"></i></a>
+            </li>
+            <li class="icon">
+                <a href="~/ToyZone/Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+        </ul>
+    </header>
+    <nav class="nav">
+        <a href="#">Hàng Mới Về</a>
+        <a href="#">Ô Tô</a>
+        <a href="#">Xe Chuyên Dụng</a>
+        <a href="#">Mô Tô</a>
+        <a href="#">Máy Bay</a>
+        <a href="#">Blind Box</a>
+        <a href="#">Gấu Bông</a>
+        <a href="#">Figure</a>
+    </nav>
+
+    <main class="MainMenu">
+        <div class="container">
+            <div class="cart-box">
+                <h1 class="cart-title">Giỏ hàng của bạn</h1>
+                <p class="cart-subtitle"> Có <span class="cart-count-text">0</span> sản phẩm trong giỏ hàng</p>
+
+                <div id="emptyCart" class="empty-cart-box" style="display: none;">
+                    <div class="empty-icon"><i class="fa-solid fa-cart-flatbed-suitcases"></i></div>
+                    <p>Bạn chưa có sản phẩm nào trong giỏ hàng.</p>
+                    <button type="button" class="btn-add-sample" onclick="addSampleProducts()">
+                        <i class="fa-solid fa-plus"></i> THÊM SẢN PHẨM MẪU DÙNG THỬ
+                    </button>
+                </div>
+
+                <div id="cartContent" class="cart-content-layout" style="display: none;">
+                    <div class="cart-items-list" id="cartItems"></div>
+
+                    <div class="cart-summary-box">
+                        <h2 class="summary-title">Tóm tắt đơn hàng</h2>
+
+                        <div class="summary-row">
+                            <span>Tạm tính</span>
+                            <span id="sumSubtotal">0 đ</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Giảm giá</span>
+                            <span id="sumDiscount" class="text-green">0 đ</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>VAT (5%)</span>
+                            <span id="sumVat">0 đ</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Phí ship</span>
+                            <span id="sumShipping">0 đ</span>
+                        </div>
+
+                        <div id="voucherApplied" class="voucher-applied-box" style="display:none;">
+                            <span id="voucherText"></span>
+                            <button type="button" onclick="removeVoucher()">×</button>
+                        </div>
+                        <div class="voucher-input-group">
+                            <input type="text" id="voucherInput" placeholder="Nhập mã:FREESHIP...">
+                            <button type="button" onclick="applyVoucher()">Áp dụng</button>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span>Tổng cộng</span>
+                            <span id="sumTotal">0 đ</span>
+                        </div>
+
+                        <button type="button" class="btn-checkout" onclick="checkout()">
+                            <i class="fa-solid fa-credit-card"></i> THANH TOÁN NOW
+                        </button>
+                        <button type="button" class="btn-clear-all" onclick="clearCart()">Xóa toàn bộ giỏ hàng</button>
+                    </div>
+                </div>
+
+                <div class="cart-footer-action">
+                    <a href="#" class="btn-continue">
+                        <i class="fa-solid fa-reply"></i> TIẾP TỤC MUA HÀNG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast-box" id="toastBox"></div>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-column">
+                <h3>Thông Tin Công Ty</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Thông Tin Liên Hệ</a></li>
+                    <li><a href="#">Tuyển Dụng</a></li>
+                    <li><a href="#">Câu Chuyện Thương Hiệu</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Chính Sách</h3>
+                <ul>
+                    <li><a href="#">Chương Trình Tích Điểm</a></li>
+                    <li><a href="#">Chính Sách Đổi Trả Hàng</a></li>
+                    <li><a href="#">Chính Sách Vận Chuyển</a></li>
+                    <li><a href="#">Chính Sách Giao Hàng</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <ul>
+                    <li><a href="#">Phương Thức Thanh Toán</a></li>
+                    <li><a href="#">Thanh Toán Trả Góp</a></li>
+                    <li><a href="#">Hỏi Đáp</a></li>
+                    <li><a href="#">Gửi Góp Ý, Khiếu Nại</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026</p>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/Myweb Script/JavaScriptCart.js"></script>
+</body>
+</html>
